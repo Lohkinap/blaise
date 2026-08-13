@@ -1,0 +1,9 @@
+# Directories
+/.env/
+/.vscode/
+/node_modules/
+
+# Files
+codebase.md
+package-lock.json
+package.json
