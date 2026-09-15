@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="dark" lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forfaits - Blaise</title>
+    <meta name="description" content="Consultez les forfaits pour l'outil CLI de prise de notes en Markdown Blaise.">
+    <link type="image/png" href="./assets/favicons/favicon-96x96.png" rel="icon" sizes="96x96">
+    <link type="image/svg+xml" href="./assets/favicons/favicon.svg" rel="icon">
+    <link href="./assets/favicons/favicon.ico" rel="shortcut icon">
+    <link href="./assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="./site.webmanifest" rel="manifest">
+    <meta name="apple-mobile-web-app-title" content="Blaise">
+    <meta name="theme-color" content="#111111">
+    <link href="libs/basecoat-vega.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="libs/tailwindcss-browser@4.js"></script>
+    <script src="libs/basecoat-all.min.js" defer></script>
+    <script src="script.js" type="module"></script>
+</head>
+<body class="overflow-x-hidden zoom-100">
+    <div class="grid grid-cols-12 mx-auto px-4 px-8 sm:px-6 max-w-6xl min-h-screen">
+        <header class="col-span-12 mt-6 sm:mt-12">
+            <nav class="flex justify-between items-center">
+                <div class="inline-flex items-baseline">
+                    <a class="opacity-80! hover:opacity-100! font-semibold text-3xl transition-opacity! duration-300! ease-in-out! cursor-pointer select-none" data-variant="ghost" href="index.html">Blaise</a>
+                </div>
+                <div class="hidden min-[950px]:flex items-center gap-2">
+                    <div class="flex flex-wrap justify-center">
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                    </div>
+                    <div class="items-center grid grid-flow-col">
+                        <div class="button-group" role="group">
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                            <hr>
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-[950px]:hidden flex">
+                    <button class="inline-flex relative justify-center items-center p-2 cursor-pointer btn" data-size="icon" data-variant="ghost" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mobile-menu-drawer').showModal()">
+                        <svg class="opacity-80! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out!" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#burger"></use></svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <dialog class="top-auto bottom-0 rounded-t-2xl w-full !max-h-[30vh] overflow-y-auto drawer" id="mobile-menu-drawer">
+            <div class="flex flex-col justify-between p-6">
+                <div class="flex justify-between items-center pb-4 border-white/10 border-b">
+                    <a class="opacity-80 hover:opacity-100 mx-auto font-extrabold text-6xl tracking-tight transition-opacity duration-300 select-none" href="index.html">Blaise</a>
+                    <button class="right-6 absolute btn" data-size="icon" data-variant="ghost" aria-label="Fermer le menu" onclick="document.getElementById('mobile-menu-drawer').close()">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#close"></use></svg>
+                    </button>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-3 py-4">
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                </div>
+                <div class="flex flex-row justify-center gap-4 pt-4 border-white/10 border-t">
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                </div>
+            </div>
+        </dialog>
+        <main class="grid grid-cols-12 col-span-12 my-12 sm:my-24 w-full" id="main-content">
+            <div class="flex flex-col col-span-12 md:col-span-10 lg:col-span-10 md:col-start-2 lg:col-start-2 w-full">
+                <section class="w-full">
+                    <div class="gap-4 grid grid-cols-1 text-center">
+                        <h1 class="font-bold text-4xl sm:text-6xl scroll-mt-24" id="pricing">Forfaits</h1>
+                        <p class="opacity-80 text-xl sm:text-2xl">Sélectionnez l'une des deux options suivantes</p>
+                    </div>
+                    <div class="gap-4 grid grid-cols-1 md:grid-cols-2 mx-auto mt-12 w-full max-w-4xl">
+                        <a class="relative flex flex-col justify-between p-6 hover:border-white/50 overflow-hidden text-inherit text-left no-underline transition-colors duration-300 cursor-pointer select-none item" data-variant="outline" href="docs.html#installation">
+                            <svg class="absolute inset-0 opacity-3 m-auto w-64 h-64 pointer-events-none shrink-0" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#download"></use></svg>
+                            <div class="z-10 relative mb-8">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <svg class="opacity-80 w-8 h-8 shrink-0" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#download"></use></svg>
+                                    <h2 class="font-bold text-3xl">Self-Hosted</h2>
+                                </div>
+                                <p class="opacity-80 mb-6 text-lg">Exécutez l'outil CLI sur votre propre machine</p>
+                                <div class="mb-6 font-bold text-4xl sm:text-5xl">0.00 $<span class="opacity-80 font-normal text-lg"> / gratuit</span></div>
+                                <div class="space-y-4 mb-6">
+                                    <fieldset class="fieldset">
+                                        <legend>Hébergement</legend>
+                                        <p class="mb-0">Contrôlez vos fichiers texte en local</p>
+                                    </fieldset>
+                                </div>
+                                <ul class="space-y-3 opacity-90">
+                                    <li>&#10003; Stockez vos notes en local</li>
+                                    <li>&#10003; Éditez avec l'éditeur de votre choix</li>
+                                    <li>&#10003; Indexez sans logiciel propriétaire</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <a class="relative flex flex-col justify-between p-6 hover:border-white/50 overflow-hidden text-inherit text-left no-underline transition-colors duration-300 cursor-pointer select-none item" data-variant="outline" href="signup.html">
+                            <svg class="absolute inset-0 opacity-3 m-auto w-64 h-64 pointer-events-none shrink-0" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#upload"></use></svg>
+                            <div class="z-10 relative mb-8">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <svg class="opacity-80 w-8 h-8 shrink-0" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#upload"></use></svg>
+                                    <h2 class="font-bold text-3xl">Cloud</h2>
+                                </div>
+                                <p class="opacity-80 mb-6 text-lg">Synchronisez vos notes Markdown en ligne</p>
+                                <div class="mb-6 font-bold text-4xl sm:text-5xl">0.99 $<span class="opacity-80 font-normal text-lg"> / mois</span></div>
+                                <div class="space-y-4 mb-6">
+                                    <fieldset class="fieldset">
+                                        <legend>Hébergement</legend>
+                                        <p class="mb-0">Sauvegardez vos données sur nos serveurs</p>
+                                    </fieldset>
+                                </div>
+                                <ul class="space-y-3 opacity-90">
+                                    <li>&#10003; Synchronisez automatiquement vos notes</li>
+                                    <li>&#10003; Accédez à vos fichiers à distance</li>
+                                    <li>&#10003; Profitez d'un support prioritaire</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="self-end col-span-12 mb-8 w-full">
+            <div class="flex md:flex-row flex-col justify-between items-center gap-6 text-sm">
+                <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="docs.html">Documentation</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="reference.html">Référence</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="pricing.html">Forfaits</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signup.html">S'inscrire</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signin.html">Se connecter</a>
+                </div>
+                <div class="flex flex-nowrap justify-center items-center gap-4">
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://github.com/Lohkinap/blaise-builds" aria-label="Ouvrir GitHub dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#github"></use></svg>
+                    </a>
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://codeberg.org" aria-label="Ouvrir Codeberg dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-7 h-7" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#codeberg"></use></svg>
+                    </a>
+                    <span data-tooltip="Thé : 80°C">
+                        <svg class="opacity-40! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out! cursor-pointer" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#tea"></use></svg>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!doctype html>
+<html class="dark" lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'inscrire - Blaise</title>
+    <meta name="description" content="Créez un compte sur Blaise.">
+    <link type="image/png" href="./assets/favicons/favicon-96x96.png" rel="icon" sizes="96x96">
+    <link type="image/svg+xml" href="./assets/favicons/favicon.svg" rel="icon">
+    <link href="./assets/favicons/favicon.ico" rel="shortcut icon">
+    <link href="./assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="./site.webmanifest" rel="manifest">
+    <meta name="apple-mobile-web-app-title" content="Blaise">
+    <meta name="theme-color" content="#111111">
+    <link href="libs/basecoat-vega.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="libs/tailwindcss-browser@4.js"></script>
+    <script src="libs/basecoat-all.min.js" defer></script>
+    <script src="script.js" type="module"></script>
+</head>
+<body class="overflow-x-hidden zoom-100">
+    <a class="sr-only focus:not-sr-only focus:z-50 focus:absolute focus:bg-background focus:p-4 focus:text-foreground" href="#main-content">Skip to content</a>
+    <div class="grid grid-cols-12 mx-auto px-4 px-8 sm:px-6 max-w-6xl min-h-screen">
+        <dialog class="cursor-default select-none dialog" data-action="dialog-toggle">
+            <div class="max-w-md">
+                <div class="space-y-4 -mx-4 px-4" id="dialog-content">
+                    <div class="flex justify-center">
+                        <svg class="opacity-60 w-20 h-20"><use href="./assets/sprite.svg#email"></use></svg>
+                    </div>
+                    <div>
+                        <p class="text-4xl text-center">Compte créé</p>
+                    </div>
+                    <div class="space-y-1 text-center">
+                        <p class="leading-normal">Un lien de vérification a été envoyé à votre adresse courriel.</p>
+                        <p class="opacity-60 text-muted-foreground text-sm leading-normal">Cliquez sur le lien pour activer votre compte et commencer.</p>
+                    </div>
+                    <div class="space-y-3 bg-neutral-900/40 mx-6 mt-2 p-4 border border-neutral-700 rounded-lg text-left">
+                        <div class="flex items-start gap-3">
+                            <div class="flex justify-center items-center border border-neutral-700 rounded-full w-6 h-6 font-semibold text-xs shrink-0">1</div>
+                            <p class="text-sm leading-normal">Consultez votre boîte de réception</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="flex justify-center items-center border border-neutral-700 rounded-full w-6 h-6 font-semibold text-xs shrink-0">2</div>
+                            <p class="text-sm leading-normal">Cliquez sur le lien de vérification</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="flex justify-center items-center border border-neutral-700 rounded-full w-6 h-6 font-semibold text-xs shrink-0">3</div>
+                            <p class="text-sm leading-normal">Connectez-vous et commencez</p>
+                        </div>
+                    </div>
+                    <p class="opacity-40 m-0 p-0 text-muted-foreground text-xs text-center leading-none">Vous n'avez pas reçu le courriel ?</p>
+                    <p class="opacity-40 m-1.5 p-0 text-muted-foreground text-xs text-center leading-none">Vérifiez vos indésirables ou <a class="underline cursor-pointer" data-variant="ghost">renvoyez le lien</a>.</p>
+                </div>
+                <div class="flex">
+                    <button class="w-full cursor-pointer btn" data-action="dialog-close">Compris</button>
+                </div>
+            </div>
+        </dialog>
+        <header class="col-span-12 mt-6 sm:mt-12">
+            <nav class="flex justify-between items-center">
+                <div class="inline-flex items-baseline">
+                    <a class="opacity-80! hover:opacity-100! font-semibold text-3xl transition-opacity! duration-300! ease-in-out! cursor-pointer select-none" data-variant="ghost" href="index.html">Blaise</a>
+                </div>
+                <div class="hidden min-[950px]:flex items-center gap-2">
+                    <div class="flex flex-wrap justify-center">
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                    </div>
+                    <div class="items-center grid grid-flow-col">
+                        <div class="button-group" role="group">
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                            <hr>
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-[950px]:hidden flex">
+                    <button class="inline-flex relative justify-center items-center p-2 cursor-pointer btn" data-size="icon" data-variant="ghost" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mobile-menu-drawer').showModal()">
+                        <svg class="opacity-80! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out!" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#burger"></use></svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <dialog class="top-auto bottom-0 rounded-t-2xl w-full !max-h-[30vh] overflow-y-auto drawer" id="mobile-menu-drawer">
+            <div class="flex flex-col justify-between p-6">
+                <div class="flex justify-between items-center pb-4 border-white/10 border-b">
+                    <a class="opacity-80 hover:opacity-100 mx-auto font-extrabold text-6xl tracking-tight transition-opacity duration-300 select-none" href="index.html">Blaise</a>
+                    <button class="right-6 absolute btn" data-size="icon" data-variant="ghost" aria-label="Fermer le menu" onclick="document.getElementById('mobile-menu-drawer').close()">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#close"></use></svg>
+                    </button>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-3 py-4">
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                </div>
+                <div class="flex flex-row justify-center gap-4 pt-4 border-white/10 border-t">
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                </div>
+            </div>
+        </dialog>
+        <main class="grid grid-cols-12 col-span-12 my-12 sm:my-24 w-full" id="main-content">
+            <div class="flex flex-col col-span-12 md:col-span-8 lg:col-span-6 md:col-start-3 lg:col-start-4 w-full">
+                <section class="mx-auto w-full max-w-xl">
+                    <div class="gap-4 grid grid-cols-1 text-center">
+                        <h1 class="font-bold text-4xl sm:text-6xl">Inscription</h1>
+                    </div>
+                    <form class="space-y-6 mt-16" novalidate>
+                        <fieldset class="fieldset">
+                            <legend class="text-2xl">Identifiants</legend>
+                            <p class="mb-0">Entrez votre e-mail et votre mot de passe</p>
+                            <div>
+                                <div class="mb-2 field" role="group">
+                                    <label for="email">E-mail<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                    <input id="email" name="email" type="email" required>
+                                    <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="email"></p>
+                                </div>
+                                <div class="gap-4 grid grid-cols-1 md:grid-cols-2">
+                                    <div class="mb-2 field" role="group">
+                                        <label for="password">Mot de passe<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                        <input id="password" name="password" type="password" required>
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="password"></p>
+                                    </div>
+                                    <div class="mb-2 field" role="group">
+                                        <label for="password-confirmation">Confirmation<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                        <input id="password-confirmation" name="password-confirmation" type="password" required>
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="password-confirmation"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="flex items-center gap-4">
+                            <hr class="flex-1 opacity-10">
+                        </div>
+                        <fieldset class="fieldset">
+                            <legend class="text-2xl">Profil</legend>
+                            <p class="mb-0">Renseignez vos informations personnelles</p>
+                            <div>
+                                <div class="gap-4 grid grid-cols-1 md:grid-cols-2">
+                                    <div class="mb-2 field" role="group">
+                                        <label for="first-name">Prénom</label>
+                                        <input id="first-name" name="first-name" type="text">
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="first-name"></p>
+                                    </div>
+                                    <div class="mb-2 field" role="group">
+                                        <label for="last-name">Nom</label>
+                                        <input id="last-name" name="last-name" type="text">
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="last-name"></p>
+                                    </div>
+                                </div>
+                                <div class="gap-4 grid grid-cols-1 md:grid-cols-2">
+                                    <div class="mb-2 field" role="group">
+                                        <label for="birth-date">Date de naissance</label>
+                                        <input class="w-full text-neutral-400 [&::-webkit-datetime-edit]:text-neutral-400 valid:[&::-webkit-datetime-edit]:text-white valid:text-white input" id="birth-date" name="birth-date" type="date" required>
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="birth-date"></p>
+                                    </div>
+                                    <div class="mb-2 field" role="group">
+                                        <label for="timezone">Fuseau horaire</label>
+                                        <select class="w-full text-white [&>option]:text-black has-[option:disabled:checked]:text-neutral-400 cursor-pointer select" id="timezone" name="timezone" required>
+                                            <option value disabled selected>Sélectionner</option>
+                                            <option value="UTC-12:00">(UTC-12:00) Ligne de changement de date à l'ouest</option>
+                                            <option value="UTC-11:00">(UTC-11:00) Temps universel coordonné -11</option>
+                                            <option value="UTC-10:00">(UTC-10:00) Hawaï</option>
+                                            <option value="UTC-09:00">(UTC-09:00) Alaska</option>
+                                            <option value="UTC-08:00">(UTC-08:00) Heure du Pacifique (États-Unis et Canada)</option>
+                                            <option value="UTC-07:00">(UTC-07:00) Heure des Rocheuses (États-Unis et Canada)</option>
+                                            <option value="UTC-06:00">(UTC-06:00) Heure du Centre (États-Unis et Canada)</option>
+                                            <option value="UTC-05:00">(UTC-05:00) Heure de l'Est (États-Unis et Canada)</option>
+                                            <option value="UTC-04:00">(UTC-04:00) Heure de l'Atlantique (Canada)</option>
+                                            <option value="UTC-03:00">(UTC-03:00) Buenos Aires, Brasília</option>
+                                            <option value="UTC-02:00">(UTC-02:00) Atlantique Centre</option>
+                                            <option value="UTC-01:00">(UTC-01:00) Açores</option>
+                                            <option value="UTC+00:00">(UTC+00:00) Londres, Dublin, Lisbonne</option>
+                                            <option value="UTC+01:00">(UTC+01:00) Paris, Berlin, Madrid</option>
+                                            <option value="UTC+02:00">(UTC+02:00) Athènes, Le Caire, Johannesburg</option>
+                                            <option value="UTC+03:00">(UTC+03:00) Moscou, Riyad, Nairobi</option>
+                                            <option value="UTC+04:00">(UTC+04:00) Dubaï, Bakou</option>
+                                            <option value="UTC+05:00">(UTC+05:00) Karachi, Tachkent</option>
+                                            <option value="UTC+05:30">(UTC+05:30) Bombay, New Delhi</option>
+                                            <option value="UTC+06:00">(UTC+06:00) Dacca, Almaty</option>
+                                            <option value="UTC+07:00">(UTC+07:00) Bangkok, Jakarta</option>
+                                            <option value="UTC+08:00">(UTC+08:00) Pékin, Singapour, Perth</option>
+                                            <option value="UTC+09:00">(UTC+09:00) Tokyo, Séoul</option>
+                                            <option value="UTC+10:00">(UTC+10:00) Sydney, Brisbane</option>
+                                            <option value="UTC+11:00">(UTC+11:00) Îles Salomon</option>
+                                            <option value="UTC+12:00">(UTC+12:00) Auckland, Fidji</option>
+                                        </select>
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="timezone"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="flex items-center gap-4">
+                            <hr class="flex-1 opacity-10">
+                        </div>
+                        <fieldset class="fieldset">
+                            <legend class="text-2xl">Forfait<span class="ml-1 text-red-400 text-xs align-super">*</span></legend>
+                            <p class="mb-0">Sélectionnez votre mode d'hébergement</p>
+                            <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="hosting"></p>
+                            <div class="flex flex-col justify-between mt-4 h-[calc(100%-5rem)]" data-slot="radio-group" role="radiogroup" aria-label="Forfaits" aria-required="true">
+                                <div class="block h-[calc(50%-0.5rem)]">
+                                    <div class="relative flex justify-between border border-neutral-700 has-checked:border-white rounded-lg h-full overflow-hidden cursor-pointer field" data-orientation="horizontal" role="group">
+                                        <div class="p-4">
+                                            <div class="flex items-center gap-x-3">
+                                                <svg class="opacity-80 w-8 h-8 shrink-0" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#download"></use></svg>
+                                                <div>
+                                                    <p class="font-bold text-base">Self-Hosted <span class="opacity-20"> - $0.00 / gratuit</span></p>
+                                                    <p>Stockez vos notes en local</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="absolute inset-0 cursor-pointer" for="self-host">
+                                            <span class="sr-only">Self-Hosted</span>
+                                        </label>
+                                        <input class="top-4 right-4 absolute pointer-events-none input" id="self-host" name="hosting" data-action="select-hosting-self" type="radio" value="self" required>
+                                    </div>
+                                </div>
+                                <div class="block h-[calc(50%-0.5rem)]">
+                                    <div class="relative flex justify-between border border-neutral-700 has-checked:border-white rounded-lg h-full overflow-hidden cursor-pointer field" data-orientation="horizontal" role="group">
+                                        <div class="p-4">
+                                            <div class="flex items-center gap-x-3">
+                                                <svg class="opacity-80 w-8 h-8 shrink-0" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#upload"></use></svg>
+                                                <div>
+                                                    <p class="font-bold text-base">Cloud <span class="opacity-20"> - $0.99 / mois ou $11.88$ / année</span></p>
+                                                    <p>Synchronisez vos notes en ligne</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="absolute inset-0 cursor-pointer" for="cloud-host">
+                                            <span class="sr-only">Cloud</span>
+                                        </label>
+                                        <input class="top-4 right-4 absolute pointer-events-none input" id="cloud-host" name="hosting" data-action="select-hosting-cloud" type="radio" value="cloud" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="invisible gap-6 grid grid-cols-1 opacity-0 max-h-0 overflow-hidden transition-all duration-300" id="billing-sections-container">
+                            <hr class="flex-1 opacity-10">
+                            <fieldset class="fieldset" id="billing" data-section="billing">
+                                <legend class="text-2xl">Facturation<span class="ml-1 text-red-400 text-xs align-super">*</span></legend>
+                                <p class="">Choisissez votre cycle de paiement</p>
+                                <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="billing"></p>
+                                <div class="flex flex-col justify-between gap-4 mt-4" data-slot="radio-group" role="radiogroup" aria-label="Cycle de facturation" aria-required="true">
+                                    <div class="block w-full">
+                                        <div class="relative flex justify-between border border-neutral-700 has-checked:border-white rounded-lg h-full overflow-hidden cursor-pointer field" data-orientation="horizontal" role="group">
+                                            <section class="p-4">
+                                                <h2 class="font-bold text-base">Mensuel <span class="opacity-60">0.99 $ / mois</span></h2>
+                                            </section>
+                                            <label class="absolute inset-0 cursor-pointer" for="billing-monthly">
+                                                <span class="sr-only">Mensuel</span>
+                                            </label>
+                                            <input class="top-4 right-4 absolute pointer-events-none input" id="billing-monthly" name="billing" type="radio" value="monthly" required>
+                                        </div>
+                                    </div>
+                                    <div class="block w-full">
+                                        <div class="relative flex justify-between border border-neutral-700 has-checked:border-white rounded-lg h-full overflow-hidden cursor-pointer field" data-orientation="horizontal" role="group">
+                                            <section class="p-4">
+                                                <h2 class="font-bold text-base">Annuel <span class="opacity-60">11.88 $ / an</span></h2>
+                                            </section>
+                                            <label class="absolute inset-0 cursor-pointer" for="billing-yearly">
+                                                <span class="sr-only">Annuel</span>
+                                            </label>
+                                            <input class="top-4 right-4 absolute pointer-events-none input" id="billing-yearly" name="billing" type="radio" value="yearly" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <hr class="flex-1 opacity-10">
+                            <fieldset class="fieldset" id="payment-info-section">
+                                <legend class="text-2xl">Paiement</legend>
+                                <p class="">Entrez vos coordonnées bancaires</p>
+                                <div>
+                                    <div class="mb-2 field" role="group">
+                                        <label for="card-name">Titulaire de la carte<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                        <input id="card-name" name="card-name" data-action="select-hosting-cloud" type="text" required>
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="card-name"></p>
+                                    </div>
+                                    <div class="gap-4 grid grid-cols-1 md:grid-cols-2">
+                                        <div class="mb-2 field" role="group">
+                                            <label for="card-number">Numéro de carte<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                            <input id="card-number" name="card-number" type="text" maxlength="20" required>
+                                            <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="card-number"></p>
+                                        </div>
+                                        <div class="mb-2 field" role="group">
+                                            <label for="card-cvc">CVC<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                            <input id="card-cvc" name="card-cvc" type="text" maxlength="4" required>
+                                            <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="card-cvc"></p>
+                                        </div>
+                                    </div>
+                                    <div class="gap-2 grid grid-cols-1 md:grid-cols-2">
+                                        <div class="mb-6 md:mb-2 field" role="group">
+                                            <label for="card-expiry-month">Mois d'expiration<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                            <input class="w-full text-white input" id="card-expiry-month" name="card-expiry-month" type="text" maxlength="2" inputmode="numeric" required>
+                                            <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="card-expiry-month"></p>
+                                        </div>
+                                        <div class="mb-2 field" role="group">
+                                            <label for="card-expiry-year">Année d'expiration<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                            <input class="w-full text-white input" id="card-expiry-year" name="card-expiry-year" type="text" maxlength="4" inputmode="numeric" required>
+                                            <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="card-expiry-year"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <hr class="flex-1 opacity-10">
+                        </div>
+                        <fieldset class="fieldset">
+                            <legend class="mb-4 text-2xl">Préférences</legend>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <input class="cursor-pointer input" id="newsletter" name="newsletter" type="checkbox">
+                                    <div class="gap-1 grid">
+                                        <label class="cursor-pointer label" for="newsletter">Recevoir la newsletter</label>
+                                        <p class="opacity-50 mb-1.5 text-muted-foreground text-sm">Nouveautés et mises à jour. Désabonnement à tout moment.</p>
+                                        <p class="text-red-400 text-xs text-right" data-error="newsletter"></p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <input class="cursor-pointer input" id="terms" name="terms" type="checkbox" required>
+                                    <div class="gap-1 grid">
+                                        <label class="cursor-pointer label" for="terms">Conditions d'utilisation<span class="-ml-1 text-red-400 text-xs align-super">*</span></label>
+                                        <p class="opacity-50 mb-1.5 text-muted-foreground text-sm">J'accepte les <a class="hover:opacity-70 underline cursor-pointer" data-variant="ghost">conditions et la politique de confidentialité</a>.</p>
+                                        <p class="-mt-1.5 text-red-400 text-xs whitespace-pre-line" data-error="terms"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button class="w-full cursor-pointer btn" data-action="signup" type="submit">Créer un compte</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <footer class="self-end col-span-12 mb-8 w-full">
+            <div class="flex md:flex-row flex-col justify-between items-center gap-6 text-sm">
+                <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="docs.html">Documentation</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="reference.html">Référence</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="pricing.html">Forfaits</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signup.html">S'inscrire</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signin.html">Se connecter</a>
+                </div>
+                <div class="flex flex-nowrap justify-center items-center gap-4">
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://github.com/Lohkinap/blaise-builds" aria-label="Ouvrir GitHub dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#github"></use></svg>
+                    </a>
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://codeberg.org" aria-label="Ouvrir Codeberg dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-7 h-7" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#codeberg"></use></svg>
+                    </a>
+                    <span data-tooltip="Thé : 80°C">
+                        <svg class="opacity-40! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out! cursor-pointer" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#tea"></use></svg>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

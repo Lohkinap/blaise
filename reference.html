@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="dark" lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Référence des commandes - Blaise</title>
+    <meta name="description" content="Liste complète des commandes, options et de la syntaxe du CLI de prise de notes Blaise.">
+    <link type="image/png" href="./assets/favicons/favicon-96x96.png" rel="icon" sizes="96x96">
+    <link type="image/svg+xml" href="./assets/favicons/favicon.svg" rel="icon">
+    <link href="./assets/favicons/favicon.ico" rel="shortcut icon">
+    <link href="./assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="./site.webmanifest" rel="manifest">
+    <meta name="apple-mobile-web-app-title" content="Blaise">
+    <meta name="theme-color" content="#111111">
+    <link href="libs/basecoat-vega.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="libs/tailwindcss-browser@4.js"></script>
+    <script src="libs/basecoat-all.min.js" defer></script>
+    <script src="script.js" type="module"></script>
+</head>
+<body class="overflow-x-hidden zoom-100">
+    <a class="sr-only focus:not-sr-only focus:z-50 focus:absolute focus:bg-background focus:p-4 focus:text-foreground" href="#main-content">Skip to content</a>
+    <div class="box-border grid grid-cols-12 mx-auto px-4 sm:px-6 max-w-6xl min-h-screen">
+        <header class="col-span-12 mt-6 sm:mt-12">
+            <nav class="flex justify-between items-center">
+                <div class="inline-flex items-baseline">
+                    <a class="opacity-80! hover:opacity-100! font-semibold text-3xl transition-opacity! duration-300! ease-in-out! cursor-pointer select-none" data-variant="ghost" href="index.html">Blaise</a>
+                </div>
+                <div class="hidden min-[950px]:flex items-center gap-2">
+                    <div class="flex flex-wrap justify-center">
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                    </div>
+                    <div class="items-center grid grid-flow-col">
+                        <div class="button-group" role="group">
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                            <hr>
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-[950px]:hidden flex">
+                    <button class="inline-flex relative justify-center items-center p-2 cursor-pointer btn" data-size="icon" data-variant="ghost" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mobile-menu-drawer').showModal()">
+                        <svg class="opacity-80! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out!" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#burger"></use></svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <dialog class="top-auto bottom-0 rounded-t-2xl w-full !max-h-[30vh] overflow-y-auto drawer" id="mobile-menu-drawer">
+            <div class="flex flex-col justify-between p-6">
+                <div class="flex justify-between items-center pb-4 border-white/10 border-b">
+                    <a class="opacity-80 hover:opacity-100 mx-auto font-extrabold text-6xl tracking-tight transition-opacity duration-300 select-none" href="index.html">Blaise</a>
+                    <button class="right-6 absolute btn" data-size="icon" data-variant="ghost" aria-label="Fermer le menu" onclick="document.getElementById('mobile-menu-drawer').close()">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#close"></use></svg>
+                    </button>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-3 py-4">
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                </div>
+                <div class="flex flex-row justify-center gap-4 pt-4 border-white/10 border-t">
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                </div>
+            </div>
+        </dialog>
+        <main class="items-start gap-8 grid grid-cols-12 col-span-12 my-12 sm:my-24 w-full min-w-0" id="main-content">
+            <aside class="hidden top-24 sticky gap-4 xl:grid col-span-12 xl:col-span-3 mt-28">
+                <div class="gap-2 grid py-1 select-none">
+                    <nav class="gap-1 grid">
+                        <p class="mb-1 px-4 font-semibold text-white/40 text-xs uppercase tracking-widest">Référence</p>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#create-note">Créer une note</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#create-task">Créer une tâche</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#edit-file">Modifier un fichier</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#move-file">Déplacer un fichier</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#delete-file">Supprimer un fichier</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#branch-file">Ramifier un fichier</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#list-files">Lister les fichiers</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#set-remote">Configurer le dépôt distant</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#show-version">Afficher la version</a>
+                    </nav>
+                </div>
+            </aside>
+            <div class="col-span-12 xl:col-span-9 mx-auto w-full min-w-0 max-w-3xl">
+                <div class="gap-4 grid">
+                    <h1 class="font-bold text-4xl sm:text-6xl text-center">Référence</h1>
+                </div>
+                <div class="gap-6 grid grid-cols-1 mt-12 w-full min-w-0">
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="create-note" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Créer une note</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-n | --note</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Créer un nouveau fichier de type note en demandant le titre et le contenu.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --note
+Enter note title: hello
+Enter note content: world
+Success: Created note.general.hello.md</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="create-task" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Créer une tâche</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-t | --task</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Créer un nouveau fichier de type tâche avec des métadonnées de date d'échéance facultatives.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --task
+Enter task title: hello
+Enter due date (optional): 2026-09-15
+Enter task content: world
+Success: Created task.2026-09-15.general.hello.md</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="edit-file" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Modifier un fichier</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-e | --edit</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Modifier un fichier existant à l'aide de l'éditeur défini dans la configuration.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --edit
+Select file to edit: note.general.hello.md
+Opening note.general.hello.md in editor...</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="move-file" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Déplacer un fichier</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-m | --move</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Déplacer ou renommer les fichiers sélectionnés en modifiant leurs champs.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --move
+Select file to move: note.general.hello.md
+Enter new path.filename: bye
+Success: Moved note.general.hello.md to bye.md</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="delete-file" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Supprimer un fichier</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-d | --delete</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Supprimer un fichier existant avec un filtrage de chaîne de recherche facultatif.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --delete
+Select file to delete: note.general.hello
+Confirm deletion of note.general.hello.md (y/N): y
+Success: Deleted note.general.hello.md</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="branch-file" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Ramifier un fichier</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-b | --branch</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Créer un nouveau fichier ramifié à partir d'un fichier source existant.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --branch
+Select source file to branch from: note.general.hello.md
+Enter new filename: bye
+Success: Created branch from note.general.hello.md named bye.md</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="list-files" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Lister les fichiers</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-l | --list</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Lister tous les fichiers actuellement stockés par Blaise.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --list
+Listing all files:
+note.general.hello.md
+task.2026-09-15.send-project.md</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="set-remote" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Configurer le dépôt distant</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-r | --remote</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Connecter Blaise à un dépôt GitHub ou Codeberg distant.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --remote
+Enter remote repository URL: git@github.com:Lohkinap/infogrames.git
+Success: Connected to remote repository git@github.com:Lohkinap/infogrames.git</pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="box-border flex flex-col p-6 hover:border-white/50 w-full min-w-0 text-left transition-colors duration-300 scroll-mt-24 item" id="show-version" data-variant="outline">
+                        <div class="w-full min-w-0">
+                            <div class="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-2 mb-1 w-full min-w-0">
+                                <h2 class="font-semibold text-white text-xl">Afficher la version</h2>
+                                <span class="bg-white/5 opacity-70 px-2 py-1 border border-white/10 rounded font-mono text-sm shrink-0">-v | --version</span>
+                            </div>
+                            <p class="opacity-80 mb-4 text-base">Afficher la version actuelle de Blaise.</p>
+                            <div class="bg-black/50 p-4 rounded w-full min-w-0 overflow-x-auto font-mono text-sm text-left">
+                                <pre class="opacity-95"><span class="text-yellow-200">&#x276f; blaise</span> --version
+blaise 0.1.0</pre>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="self-end col-span-12 mb-8 w-full">
+            <div class="flex md:flex-row flex-col justify-between items-center gap-6 text-sm">
+                <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="docs.html">Documentation</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="reference.html">Référence</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="pricing.html">Forfaits</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signup.html">S'inscrire</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signin.html">Se connecter</a>
+                </div>
+                <div class="flex flex-nowrap justify-center items-center gap-4">
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://github.com/Lohkinap/blaise-builds" aria-label="Ouvrir GitHub dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#github"></use></svg>
+                    </a>
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://codeberg.org" aria-label="Ouvrir Codeberg dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-7 h-7" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#codeberg"></use></svg>
+                    </a>
+                    <span data-tooltip="Thé : 80°C">
+                        <svg class="opacity-40! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out! cursor-pointer" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#tea"></use></svg>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

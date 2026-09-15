@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="dark" lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Blaise</title>
+    <meta name="description" content="Consultez la documentation officielle du CLI de prise de notes en Markdown Blaise : installation, structure, configuration et guide.">
+    <link type="image/png" href="./assets/favicons/favicon-96x96.png" rel="icon" sizes="96x96">
+    <link type="image/svg+xml" href="./assets/favicons/favicon.svg" rel="icon">
+    <link href="./assets/favicons/favicon.ico" rel="shortcut icon">
+    <link href="./assets/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="./site.webmanifest" rel="manifest">
+    <meta name="apple-mobile-web-app-title" content="Blaise">
+    <meta name="theme-color" content="#111111">
+    <link href="libs/basecoat-vega.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="libs/tailwindcss-browser@4.js"></script>
+    <script src="libs/basecoat-all.min.js" defer></script>
+    <script src="script.js" type="module"></script>
+</head>
+<body class="overflow-x-hidden zoom-100">
+    <a class="sr-only focus:not-sr-only focus:z-55 focus:absolute focus:bg-background focus:p-4 focus:text-foreground" href="#main-content">Skip to content</a>
+    <div class="box-border grid grid-cols-12 mx-auto px-4 sm:px-6 max-w-6xl min-h-screen">
+        <header class="col-span-12 mt-6 sm:mt-12">
+            <nav class="flex justify-between items-center">
+                <div class="inline-flex items-baseline">
+                    <a class="opacity-80! hover:opacity-100! font-semibold text-3xl transition-opacity! duration-300! ease-in-out! cursor-pointer select-none" data-variant="ghost" href="index.html">Blaise</a>
+                </div>
+                <div class="hidden min-[950px]:flex items-center gap-2">
+                    <div class="flex flex-wrap justify-center">
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                        <a class="opacity-80! hover:opacity-100! p-2 sm:p-4 text-base transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                    </div>
+                    <div class="items-center grid grid-flow-col">
+                        <div class="button-group" role="group">
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                            <hr>
+                            <a class="px-4 w-auto text-base cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-[950px]:hidden flex">
+                    <button class="inline-flex relative justify-center items-center p-2 cursor-pointer btn" data-size="icon" data-variant="ghost" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mobile-menu-drawer').showModal()">
+                        <svg class="opacity-80! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out!" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#burger"></use></svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <dialog class="top-auto bottom-0 rounded-t-2xl w-full !max-h-[30vh] overflow-y-auto drawer" id="mobile-menu-drawer">
+            <div class="flex flex-col justify-between p-6">
+                <div class="flex justify-between items-center pb-4 border-white/10 border-b">
+                    <a class="opacity-80 hover:opacity-100 mx-auto font-extrabold text-6xl tracking-tight transition-opacity duration-300 select-none" href="index.html">Blaise</a>
+                    <button class="right-6 absolute btn" data-size="icon" data-variant="ghost" aria-label="Fermer le menu" onclick="document.getElementById('mobile-menu-drawer').close()">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#close"></use></svg>
+                    </button>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-3 py-4">
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="docs.html">Documentation</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="reference.html">Référence</a>
+                    <a class="justify-center opacity-80 hover:opacity-100 p-8 w-full font-bold text-3xl transition-opacity duration-300 cursor-pointer btn" data-variant="ghost" href="pricing.html">Forfaits</a>
+                </div>
+                <div class="flex flex-row justify-center gap-4 pt-4 border-white/10 border-t">
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" data-variant="outline" href="signup.html">S'inscrire</a>
+                    <a class="w-1/2 font-semibold text-xl cursor-pointer btn" data-size="lg" href="signin.html">Se connecter</a>
+                </div>
+            </div>
+        </dialog>
+       <main class="items-start gap-8 grid grid-cols-12 col-span-12 my-12 sm:my-24 w-full min-w-0" id="main-content">
+            <aside class="hidden top-24 sticky gap-4 xl:grid col-span-12 xl:col-span-3 mt-28">
+                <div class="gap-2 grid py-1 select-none">
+                    <nav class="gap-1 grid">
+                        <p class="mb-1 px-4 font-semibold text-white/40 text-xs uppercase tracking-widest">Démarrage</p>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#introduction">Introduction</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#installation">Installation</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#configuration">Configuration</a>
+                    </nav>
+                    <nav class="gap-1 grid mt-8">
+                        <p class="mb-1 px-4 font-semibold text-white/40 text-xs uppercase tracking-widest">Concepts</p>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#structure">Structure</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#storage">Stockage</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#templates">Modèles</a>
+                    </nav>
+                    <nav class="gap-1 grid mt-8">
+                        <p class="mb-1 px-4 font-semibold text-white/40 text-xs uppercase tracking-widest">Dépannage</p>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#getting-help">Obtenir de l'aide</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#report-bugs">Signaler des bugs</a>
+                    </nav>
+                    <nav class="gap-1 grid mt-8">
+                        <p class="mb-1 px-4 font-semibold text-white/40 text-xs uppercase tracking-widest">Contribution</p>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#contributing-guide">Guide de contribution</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#code-of-conduct">Code de conduite</a>
+                        <a class="justify-start! opacity-80! hover:opacity-100! p-4 w-full text-md transition-opacity! duration-300! ease-in-out! cursor-pointer btn" data-variant="ghost" href="#license">Licence</a>
+                    </nav>
+                </div>
+            </aside>
+            <div class="col-span-12 xl:col-span-9 mx-auto w-full min-w-0 max-w-3xl">
+                <div class="grid text-center">
+                    <h1 class="font-bold text-4xl sm:text-6xl">Documentation</h1>
+                </div>
+                <div class="gap-8 grid mt-12 w-full min-w-0">
+                    <div class="gap-6 grid w-full min-w-0">
+                        <section class="gap-2 grid w-full min-w-0 scroll-mt-24" id="introduction">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Introduction</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Blaise est un outil CLI de prise de notes en Markdown.</p>
+                            <p class="opacity-80 text-base leading-relaxed">Chaque note est un fichier, stocké dans un répertoire unique sans sous-dossiers. Le nom du fichier porte l'information de hiérarchie ou de catégorie ; le système de fichiers reste plat. Les fichiers sont des fichiers texte simples, éditables avec n'importe quel éditeur et indexables par n'importe quel outil de recherche, sans dépendance à un logiciel propriétaire.</p>
+                        </section>
+                        <section class="gap-2 grid w-full min-w-0 scroll-mt-24" id="installation">
+                            <h3 class="font-bold text-2xl sm:text-3xl">Installation</h3>
+                            <p class="opacity-80 text-base leading-relaxed">Les méthodes d'installation pour Linux, Windows et macOS seront bientôt disponibles.</p>
+                        </section>
+                        <section class="gap-2 grid scroll-mt-24" id="configuration">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Configuration</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Définissez votre éditeur de texte et l'URL de votre dépôt distant dans le fichier de configuration.</p>
+                        </section>
+                    </div>
+                    <hr class="opacity-10">
+                    <div class="gap-6 grid">
+                        <section class="gap-2 grid scroll-mt-24" id="structure">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Structure</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Chaque fichier suit une convention de nommage stricte. La structure encode entièrement la catégorie et la hiérarchie.</p>
+                            <p class="opacity-80 text-base leading-relaxed">Déplacez vos fichiers librement sans briser l'interprétation des données.</p>
+                            <div class="gap-3 grid w-full min-w-0 mt-2">
+                                <p class="overflow-x-auto font-semibold text-white text-xl">
+                                    <code class="font-mono text-white">[<span class="text-yellow-200/85">type</span>].[<span class="text-yellow-200/85">options</span>].[<span class="text-yellow-200/85">path</span>].[<span class="text-yellow-200/85">filename</span>]</code>
+                                </p>
+                                <ul class="gap-2 grid opacity-80 text-base list-disc list-inside">
+                                    <li><code class="font-mono text-yellow-200">type</code> : Définir le type de fichier (note ou task).</li>
+                                    <li><code class="font-mono text-yellow-200">options</code> : Ajouter des métadonnées optionnelles comme une échéance.</li>
+                                    <li><code class="font-mono text-yellow-200">path</code> : Préciser l'emplacement logique de la note.</li>
+                                    <li><code class="font-mono text-yellow-200">filename</code> : Indiquer le nom du fichier.</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="gap-2 grid scroll-mt-24" id="storage">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Stockage</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Sauvegardez vos notes sous forme de fichiers texte simples dans un répertoire unique. Synchronisez l'ensemble de votre répertoire vers un dépôt distant distant avec la commande dédiée.</p>
+                        </section>
+                        <section class="gap-2 grid scroll-mt-24" id="templates">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Modèles</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Utilisez la commande de ramification pour créer un nouveau fichier à partir d'une note existante. Le nouveau fichier hérite du type et du chemin source. Conservez une traçabilité claire entre des notes reliées.</p>
+                        </section>
+                    </div>
+                    <hr class="opacity-10">
+                    <div class="gap-6 grid">
+                        <section class="gap-2 grid scroll-mt-24" id="getting-help">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Obtenir de l'aide</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Exécutez l'option d'aide dans votre terminal pour consulter le manuel.</p>
+                        </section>
+                        <section class="gap-2 grid scroll-mt-24" id="report-bugs">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Signaler des bugs</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Ouvrez une issue sur le dépôt officiel en cas de comportement inattendu. Précisez la commande exécutée et le résultat obtenu.</p>
+                        </section>
+                    </div>
+                    <hr class="opacity-10">
+                    <div class="gap-6 grid">
+                        <section class="gap-2 grid scroll-mt-24" id="contributing-guide">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Guide de contribution</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Soumettez une pull request en respectant les conventions du projet.</p>
+                        </section>
+                        <section class="gap-2 grid scroll-mt-24" id="code-of-conduct">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Code de conduite</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Respectez le code de conduite du projet lors de vos interactions et contributions.</p>
+                        </section>
+                        <section class="gap-2 grid scroll-mt-24" id="license">
+                            <h2 class="font-bold text-2xl sm:text-3xl">Licence</h2>
+                            <p class="opacity-80 text-base leading-relaxed">Ce logiciel est distribué sous les termes de la licence MIT.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="self-end col-span-12 mb-8 w-full">
+            <div class="flex md:flex-row flex-col justify-between items-center gap-6 text-sm">
+                <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="docs.html">Documentation</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="reference.html">Référence</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="pricing.html">Forfaits</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signup.html">S'inscrire</a>
+                    <a class="opacity-40 hover:opacity-100 whitespace-nowrap transition-opacity select-none" href="signin.html">Se connecter</a>
+                </div>
+                <div class="flex flex-nowrap justify-center items-center gap-4">
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://github.com/Lohkinap/blaise-builds" aria-label="Ouvrir GitHub dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-8 h-8" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#github"></use></svg>
+                    </a>
+                    <a class="opacity-40! hover:opacity-100! transition-opacity! duration-300! ease-in-out! cursor-pointer" href="https://codeberg.org" aria-label="Ouvrir Codeberg dans un nouvel onglet" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-7 h-7" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#codeberg"></use></svg>
+                    </a>
+                    <span data-tooltip="Thé : 80°C">
+                        <svg class="opacity-40! hover:opacity-100! w-8 h-8 transition-opacity! duration-300! ease-in-out! cursor-pointer" aria-hidden="true" focusable="false"><use href="./assets/sprite.svg#tea"></use></svg>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
