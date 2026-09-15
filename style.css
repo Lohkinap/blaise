@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    transition:
+        background-color 300ms ease-in-out,
+        border-color 300ms ease-in-out,
+        color 300ms ease-in-out,
+        fill 300ms ease-in-out,
+        stroke 300ms ease-in-out;
+}
+
+::selection {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body:has(#mobile-menu-drawer:popover-open) {
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/before.png');
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/after.png');
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.effect__gradient {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to top, black, transparent);
+    pointer-events: none;
+    z-index: 50;
+    transform: translateY(var(--scroll-offset, 0px));
+}
+
+.page__ribbon:hover {
+    animation-play-state: paused;
+}
+
+@keyframes ribbon-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.effect__flicker {
+    animation: flicker 4s infinite linear;
+}
+
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.3;
+        text-shadow: none;
+    }
+}
+
+/* .dark class cannot be renamed to follow BEM methodology because it belongs to basecoatui theme (https://basecoatui.com). */
+.dark ::selection {
+    background-color: #ffffff;
+    color: #111111;
+}
