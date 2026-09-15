@@ -27,7 +27,7 @@ body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../../assets/before.png');
+    background-image: url('/blaise/assets/before.png');
     opacity: 0.6;
     pointer-events: none;
     z-index: -1;
@@ -37,7 +37,7 @@ body::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../../assets/after.png');
+    background-image: url('/blaise/assets/after.png');
     opacity: 0.2;
     pointer-events: none;
     z-index: 2;

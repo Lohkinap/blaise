@@ -2,30 +2,43 @@
   "name": "Blaise",
   "short_name": "Blaise",
   "description": "Blaise is a command-line note-taking tool built on markdown.",
-  "start_url": "https://lohkinap.github.io/blaise/",
-  "scope": "https://lohkinap.github.io/blaise/",
+  "start_url": "/blaise/",
+  "scope": "/blaise/",
   "display": "standalone",
   "background_color": "#111111",
   "theme_color": "#111111",
   "icons": [
     {
-      "src": "assets/favicons/web-app-manifest-144x144.png",
+      "src": "/blaise/assets/favicons/web-app-manifest-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "assets/favicons/web-app-manifest-192x192.png",
+      "src": "/blaise/assets/favicons/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "assets/favicons/web-app-manifest-512x512.png",
+      "src": "/blaise/assets/favicons/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     }
   ],
-  "screenshots": []
+  "screenshots": [
+    {
+      "src": "/blaise/screenshots/desktop-1920.index.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/blaise/screenshots/mobile-500.index.webp",
+      "sizes": "500x1000",
+      "type": "image/webp",
+      "form_factor": "narrow"
+    }
+  ]
 }
