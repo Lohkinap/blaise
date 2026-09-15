@@ -1,9 +1,10 @@
 # Directories
 /.env/
 /.vscode/
+/blaise-cli/
 /node_modules/
+/releases/
 
 # Files
-codebase.md
 package-lock.json
 package.json
