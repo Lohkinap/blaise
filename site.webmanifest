@@ -29,14 +29,14 @@
   ],
   "screenshots": [
     {
-      "src": "/blaise/screenshots/desktop-1920.index.webp",
-      "sizes": "1920x1080",
+      "src": "/blaise/screenshots/desktop-1920.index.manifest.webp",
+      "sizes": "1900x1040",
       "type": "image/webp",
       "form_factor": "wide"
     },
     {
-      "src": "/blaise/screenshots/mobile-500.index.webp",
-      "sizes": "500x1000",
+      "src": "/blaise/screenshots/mobile-500.index.manifest.webp",
+      "sizes": "451x722",
       "type": "image/webp",
       "form_factor": "narrow"
     }
